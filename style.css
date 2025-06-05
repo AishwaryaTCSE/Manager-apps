@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: linear-gradient(to right, #6dbfb8 0%, #fbe2e2 100%);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  background-color: #fff;
+}
+
+input:focus {
+  border-color: #6aafe6;
+  box-shadow: 0 0 8px rgba(106, 175, 230, 0.6);
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2be8e8;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #030303;
+}
+
+.sort-buttons {
+  margin-bottom: 10px;
+}
+
+/* Glassmorphism for table (view section) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 hsl(340, 9%, 7%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+.highlight {
+  background-color: #85f985;
+}

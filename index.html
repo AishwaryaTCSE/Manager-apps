@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Record Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1> 📘Student Record Manager</h1>
+
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="text" id="batch" placeholder="Batch" required />
+    <input type="number" id="age" placeholder="Age" min="1" required />
+    <input type="number" id="score" placeholder="Score (0–100)" min="0" max="100" required />
+    <button type="submit">Add Student</button>
+  </form>
+
+  <input type="text" id="searchInput" placeholder="Search by name..." />
+
+  <div class="sort-buttons">
+    <button id="sortAge">Sort by Age ↑</button>
+    <button id="sortScore">Sort by Score ↓</button>
+  </div>
+
+  <div class="summary">
+    <p id="totalStudents">Total Students: 0</p>
+    <p id="averageScore">Average Score: 0</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Batch</th>
+        <th>Age</th>
+        <th>Score</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
