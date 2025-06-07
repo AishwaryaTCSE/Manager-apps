@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Task Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Task Manager</h1>
+    <button id="logoutBtn">Logout</button>
+
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Task title" required />
+      <textarea id="description" placeholder="Task description" required></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <button onclick="filterTasks('all')">All Tasks</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+      <button onclick="filterTasks('incomplete')">Incomplete</button>
+      <button onclick="sortTasks()">Sort A-Z</button>
+    </div>
+
+    <p id="stats">Total tasks: 0 | Completed: 0 | Incomplete: 0</p>
+    <div id="taskList"></div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <!-- Config and Task Logic -->
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/task.js"></script>
+</body>
+</html>
